@@ -80,7 +80,7 @@ function MarketingDemo() {
         </main>
         
         <Footer />
-      </div>
+            </div>
     </>
   );
 }
@@ -91,7 +91,7 @@ function LandingPage() {
     document.title = 'AI Marketing Demos';
   }, []);
 
-  return (
+    return (
     <>
       <style>{`
         body {
@@ -193,7 +193,7 @@ function LandingPage() {
 // Header Component
 const Header = () => (
   <header className="text-center mb-8 md:mb-12">
-    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text">Goaly AI出海GTM营销引擎</h1>
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text">AI出海GTM营销引擎</h1>
     <p className="mt-2 md:mt-4 text-lg md:text-2xl text-gray-600">专为出海企业打造的“战略大脑”</p>
     <p className="mt-4 text-base md:text-lg max-w-3xl mx-auto bg-blue-100 text-blue-800 p-3 rounded-lg border border-blue-200">
        “当所有品牌都在卖‘紧致’和‘提拉’，我们让您的机器，成为<strong>唯一被记住的那个</strong>。”
@@ -216,16 +216,16 @@ const Tabs = ({ activeTab, setActiveTab }) => {
     <div className="mb-8 border-b border-gray-200">
       <nav className="flex flex-wrap -mb-px justify-center" aria-label="Tabs">
         {tabs.map(tab => (
-          <button
+                 <button 
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={`text-sm md:text-base mr-2 md:mr-4 py-3 px-2 md:px-4 border-b-2 font-medium ${activeTab === tab.id ? 'tab-active' : 'tab-inactive'}`}
-          >
+                >
             {tab.label}
-          </button>
+                </button>
         ))}
       </nav>
-    </div>
+            </div>
   );
 };
 
@@ -233,7 +233,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
 
 const ProblemSection = () => {
     return (
-        <section>
+            <section>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-red-600">核心问题：阻碍医美仪器出海成功的三大挑战</h2>
             
             <div className="space-y-6">
@@ -271,7 +271,7 @@ const ProblemSection = () => {
                         </div>
                         <div className="flex items-start p-4 bg-white rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3 text-orange-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <div>
+                <div>
                                 <h4 className="font-semibold">难以建立信任关系和渠道网络</h4>
                                 <p className="text-gray-600">作为新品牌，缺乏本地成功案例和口碑，难以说服诊所和医生进行合作。</p>
                             </div>
@@ -293,13 +293,13 @@ const ProblemSection = () => {
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
     );
 };
 
 
 const SolutionSection = () => (
-    <section>
+            <section>
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-600 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
             我们的解决方案：您的北美市场“战略大脑”
@@ -325,10 +325,10 @@ const SolutionSection = () => (
                         <div className="text-sm font-medium text-blue-800">本地化GTM递推</div>
                     </div>
                 </div>
-            </div>
-
+                </div>
+                
             {/* Functional Modules Layer */}
-            <div className="mb-6">
+                <div className="mb-6">
                 <h4 className="text-base font-semibold text-green-700 mb-3 text-center">功能模块</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     <div className="space-y-2">
@@ -424,7 +424,7 @@ const SolutionSection = () => (
                                 <div className="font-medium text-purple-800">AgentGym</div>
                             </div>
                         </div>
-                    </div>
+                </div>
 
                     {/* Model Matrix */}
                     <div>
@@ -449,10 +449,10 @@ const SolutionSection = () => (
                                 <div className="font-medium text-purple-800">RAG检索</div>
                             </div>
                         </div>
-                    </div>
+                </div>
 
                     {/* Other Infra Components */}
-                    <div>
+                <div>
                         <h5 className="text-sm font-semibold text-purple-600 mb-2">其他Infra组件</h5>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                             <div className="bg-purple-50 border border-purple-200 p-2 rounded text-xs text-center">
@@ -498,20 +498,22 @@ const FeaturesSection = () => (
             </div>
             <div className="bg-gray-50 p-6 rounded-lg border">
                 <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块二：竞品智能分析</h3>
-                <p className="text-gray-600 mb-3">知己知彼，找到您独一无二的“护城河”。</p>
+                <p className="text-gray-600 mb-3">知己知彼，找到您独一无二的"护城河"。</p>
                  <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
                     <li>全方位扫描竞争对手的产品矩阵和定价策略</li>
                     <li>解析明星产品的成功要素和市场渗透路径</li>
                     <li>基于SWOT框架的智能化分析，生成差异化定位和市场策略</li>
+                    <li>回到关键客户痛点分析，找出我们产品应该专注的真正重要优势</li>
+                    <li>基于数据驱动的方法分析我们产品与其他竞争对手的竞争优势和劣势</li>
                 </ul>
-                <div className="mt-3 bg-green-100 text-green-800 p-3 text-sm rounded">
+                {/* <div className="mt-3 bg-green-100 text-green-800 p-3 text-sm rounded">
                     <p className="font-semibold mb-2">🎯 <strong>输出结果：</strong></p>
                     <div className="space-y-1">
                         <div><strong>1.</strong> 配备双手柄+五治疗头，独创治疗头可精准作用于2mm/3mm/4.5mm皮下层（传统仅3mm/4.5mm），实现超声刀无法覆盖区域的精细化抗衰，治疗维度更全面。</div>
                         <div><strong>2.</strong> 能量呈"圈状"分布，相比超声刀的"点状"聚焦更温和舒适，治疗无需敷麻药，痛感大幅降低。</div>
                         <div><strong>3.</strong> NMPA认证 更安全合规</div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="bg-gray-50 p-6 rounded-lg border">
                 <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块三：AI新品定位推荐</h3>
@@ -553,6 +555,7 @@ const CaseStudiesSection = () => {
   const subTabs = [
     { id: 'gtm', label: '进入北美市场' },
     { id: 'dev', label: '新产品研发' },
+    { id: 'industry', label: '业界成功案例' },
   ];
 
   return (
@@ -561,21 +564,22 @@ const CaseStudiesSection = () => {
       <div className="mb-6 border-b border-gray-200">
         <nav className="flex -mb-px" aria-label="Sub-Tabs">
           {subTabs.map(tab => (
-            <button
+                <button 
               key={tab.id}
               onClick={() => setActiveSubTab(tab.id)}
               className={`sub-tab-btn text-sm md:text-base mr-4 py-3 px-1 border-b-2 font-medium ${activeSubTab === tab.id ? 'sub-tab-active' : 'sub-tab-inactive'}`}
             >
               {tab.label}
-            </button>
+                </button>
           ))}
         </nav>
       </div>
       <div>
         {activeSubTab === 'gtm' && <GTMCaseStudy />}
         {activeSubTab === 'dev' && <DevCaseStudy />}
+        {activeSubTab === 'industry' && <IndustryCaseStudy />}
       </div>
-    </section>
+            </section>
   );
 };
 
@@ -771,7 +775,7 @@ const FlowChart = () => {
     });
   };
 
-  return (
+    return (
     <div className="space-y-4">
       {flowchartData.map((box, index) => (
         <div key={box.id} className="relative">
@@ -783,7 +787,7 @@ const FlowChart = () => {
                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 10L12 15L17 10" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                </svg>
                 </div>
               </div>
             </div>
@@ -812,8 +816,8 @@ const FlowChart = () => {
           </div>
         </div>
       ))}
-    </div>
-  );
+        </div>
+    );
 };
 
 const DevCaseStudy = () => (
@@ -822,6 +826,151 @@ const DevCaseStudy = () => (
         <p className="mb-6 text-gray-600">案例：一家客户希望开发一款区别于主流市场的抗衰仪器。AI引擎通过市场分析，发现了一个被忽视的巨大机会：北美中年男性市场。</p>
         <FlowChart />
          <p className="mt-4 text-sm text-gray-600 bg-gray-100 p-3 rounded-md">✅ AI一键生成了包含市场数据、产品定义、GTM策略和本地化营销素材。整个新仪器落地过程从6个月缩短到3周。</p>
+    </div>
+);
+
+const IndustryCaseStudy = () => (
+    <div>
+        {/* 转化率提升案例 */}
+        <div className="bg-blue-50 p-6 rounded-lg mb-6">
+            <h3 className="font-bold text-xl text-blue-700 mb-4">🚀 转化率提升案例</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-600 mb-2">Grammarly</h4>
+                    <p className="text-gray-600 mb-2">通过使用AI识别高意向Lead，将其升级计划的转化率提高了<strong>80%</strong></p>
+                    <p className="text-sm text-gray-500">来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">SuperAGI案例研究</a></p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-600 mb-2">科技SaaS提供商</h4>
+                    <p className="text-gray-600 mb-2">实施AI驱动的Lead评分后，转化率提高了<strong>32%</strong></p>
+                    <p className="text-sm text-gray-500">来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">SuperAGI案例研究</a></p>
+                </div>
+            </div>
+        </div>
+
+        {/* ROI和营销效率案例 */}
+        <div className="bg-green-50 p-6 rounded-lg mb-6">
+            <h3 className="font-bold text-xl text-green-700 mb-4">💰 ROI和营销效率提升</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-600 mb-2">星巴克</h4>
+                    <p className="text-gray-600 mb-2">营销ROI提高<strong>30%</strong></p>
+                    <p className="text-sm text-gray-500">来源: <a href="https://www.brandxr.io/ai-powered-personalization-personalized-customer-experiences-at-scale" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">BrandXR</a></p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-600 mb-2">Netflix</h4>
+                    <p className="text-gray-600 mb-2">通过AI个人定制化内容ROI提升30%，每年节省<strong>$10亿</strong></p>
+                    <p className="text-sm text-gray-500">来源: <a href="https://www.brandxr.io/ai-powered-personalization-personalized-customer-experiences-at-scale" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">BrandXR</a></p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-600 mb-2">BCG研究数据</h4>
+                    <p className="text-gray-600 mb-2">深度投资AI的组织平均看到销售ROI提高<strong>10-20%</strong></p>
+                    <p className="text-sm text-gray-500">来源: <a href="https://www.bcg.com/publications/2025/closing-the-ai-impact-gap" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">BCG报告</a></p>
+                </div>
+            </div>
+        </div>
+
+        {/* 行业特定案例 */}
+        <div className="bg-purple-50 p-6 rounded-lg mb-6">
+            <h3 className="font-bold text-xl text-purple-700 mb-4">🏭 行业特定成功案例</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-600 mb-2">制造设备供应商</h4>
+                    <p className="text-gray-600 mb-2">通过AI驱动的Lead评分实现了<strong>27%的收入增长</strong></p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-600 mb-2">金融服务公司</h4>
+                    <p className="text-gray-600 mb-2">通过使用AI评分专注于准备购买的客户，销售周期缩短了<strong>41%</strong></p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-600 mb-2">医疗技术提供商</h4>
+                    <p className="text-gray-600 mb-2">通过AI Lead评分优化营销支出，ROI提高了<strong>35%</strong></p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-600 mb-2">行为定向优化</h4>
+                    <p className="text-gray-600 mb-2">使用行为数据进行定向广告和个性化内容可以将转化率提高<strong>10%</strong></p>
+                    <p className="text-sm text-gray-500">来源: <a href="https://dragonflyai.co/resources/blog/how-ai-boosts-conversion-rates-with-predictive-attention-insights" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">DragonFly AI</a></p>
+                </div>
+            </div>
+        </div>
+
+        {/* 销售自动化效率提升 */}
+        <div className="bg-orange-50 p-6 rounded-lg mb-6">
+            <h3 className="font-bold text-xl text-orange-700 mb-4">⏰ 销售自动化效率提升</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                    <div className="bg-white p-4 rounded-lg">
+                        <h4 className="font-semibold text-orange-600 mb-2">日常时间节省</h4>
+                        <ul className="text-sm text-gray-600 space-y-2">
+                            <li>• 销售专业人员通过AI自动化节省<strong>2小时15分钟/天</strong></li>
+                            <li>• 78%认为AI帮助他们专注于最关键的工作</li>
+                            <li>• 员工使用GenAI平均每天节省<strong>1.75小时</strong></li>
+                            <li>• 电商团队采用AI后平均每周节省<strong>6.4小时</strong></li>
+                        </ul>
+                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://www.venasolutions.com/blog/ai-statistics" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">Vena Solutions</a></p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg">
+                        <h4 className="font-semibold text-orange-600 mb-2">生产力提升</h4>
+                        <ul className="text-sm text-gray-600 space-y-2">
+                            <li>• 使用AI工具后工作效率提升<strong>66%</strong></li>
+                            <li>• 相当于美国47年的自然生产力增长</li>
+                            <li>• 80%的员工认为AI提升了他们的生产力</li>
+                            <li>• 哈佛研究：管理咨询师完成任务速度提升<strong>25.1%</strong></li>
+                        </ul>
+                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://www.venasolutions.com/blog/ai-statistics" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">Vena Solutions</a></p>
+                    </div>
+                </div>
+                <div className="space-y-4">
+                    <div className="bg-white p-4 rounded-lg">
+                        <h4 className="font-semibold text-orange-600 mb-2">收入影响</h4>
+                        <ul className="text-sm text-gray-600 space-y-2">
+                            <li>• 采用AI销售工具的公司收入平均增长<strong>15%</strong></li>
+                            <li>• 销售成本降低<strong>12%</strong></li>
+                            <li>• 销售合格Lead增长<strong>25%</strong></li>
+                        </ul>
+                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://superagi.com/top-10-ai-tools-to-boost-sales-productivity-and-reduce-costs-in-2025/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">SuperAGI</a> | <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">McKinsey</a></p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg">
+                        <h4 className="font-semibold text-orange-600 mb-2">成本降低</h4>
+                        <ul className="text-sm text-gray-600 space-y-2">
+                            <li>• 33%的企业使用Gen AI工具降低成本</li>
+                            <li>• 54%的企业报告至少<strong>1%</strong>的积极结果</li>
+                            <li>• 14%的企业实现<strong>11%</strong>或更高的改进</li>
+                            <li>• 97%的高级商业领袖报告AI投资正回报</li>
+                        </ul>
+                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://www.venasolutions.com/blog/ai-statistics" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">Vena Solutions</a> | <a href="https://indatalabs.com/blog/ai-cost-reduction" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">InData Labs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* 关键数据洞察 */}
+        <div className="bg-yellow-50 p-6 rounded-lg">
+            <h3 className="font-bold text-xl text-yellow-700 mb-4">📊 关键数据洞察</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                    <div className="bg-white p-4 rounded-lg">
+                        <h4 className="font-semibold text-yellow-600 mb-2">AI Lead评分效果</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                            <li>• Lead资格认定准确性提高<strong>40%</strong></li>
+                            <li>• 转化率提高<strong>40%</strong>，误判率降低<strong>30%</strong></li>
+                            <li>• 高绩效公司可达到<strong>6%</strong>转化率（vs 3.2%平均）</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="space-y-3">
+                    <div className="bg-white p-4 rounded-lg">
+                        <h4 className="font-semibold text-yellow-600 mb-2">时机影响</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                            <li>• 第一小时内跟进Lead转化率提高到<strong>53%</strong></li>
+                            <li>• 预测性Lead评分使用增长<strong>14倍</strong></li>
+                            <li>• 领先公司AI项目ROI是同行<strong>2.1倍</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p className="mt-4 text-sm text-gray-500 text-center">数据来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:underline">SuperAGI案例研究</a> | <a href="https://iterable.com/blog/15-stats-roi-ai-marketing/" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:underline">Iterable</a></p>
+        </div>
     </div>
 );
 
@@ -851,23 +1000,25 @@ const WhyUsSection = () => {
             {activeSubTab === 'advantage' && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="border rounded-lg p-4 bg-red-50">
-                        <h4 className="font-bold text-red-600 text-lg">传统SaaS工具</h4>
+                        <h4 className="font-bold text-red-600 text-lg">传统工具</h4>
                         <ul className="list-disc list-inside mt-2 text-red-900">
                             <li>给你数据</li>
-                            <li>让你“知道”</li>
+                            <li>让你"知道"</li>
                             <li>需要你写文案</li>
-                            <li>指导你找SPA</li>
-                            <li>高昂的固定订阅费</li>
+                            <li>指导你做营销</li>
+                            <li>只专注漏斗中的单一环节</li>
+                            <li>月付$5,000</li>
                         </ul>
                     </div>
                     <div className="border rounded-lg p-4 bg-green-50">
-                        <h4 className="font-bold text-green-600 text-lg">我们的AI营销引擎</h4>
+                        <h4 className="font-bold text-green-600 text-lg">我们的AI营销增长引擎</h4>
                         <ul className="list-disc list-inside mt-2 text-green-900">
-                            <li>给你战略</li>
-                            <li>让你“做到”</li>
-                            <li>自动生成并测试文案</li>
-                            <li>自动筛选+触达+优化</li>
-                            <li>成为您的增长合伙人</li>
+                            <li>给你增长</li>
+                            <li>让你"做到"</li>
+                            <li>自动生成并优化营销策略</li>
+                            <li>自动执行+监控+优化</li>
+                            <li>提供一站式端到端解决方案</li>
+                            <li>按增长结果付费</li>
                         </ul>
                     </div>
                 </div>
@@ -881,7 +1032,7 @@ const WhyUsSection = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M12 10.5h.01M12 13.5h.01M12 16.5h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                             <div>
                                 <h4 className="font-semibold">前Meta Llama 核心研发团队</h4>
-                                <p className="text-gray-600 text-sm">拥有世界级AI大模型研发背景，奠定我们坚实的技术领先地位。</p>
+                                <p className="text-gray-600 text-sm">拥有世界级AI大模型研发背景，奠定我们坚实的技术实力。</p>
                             </div>
                         </div>
                          <div className="flex items-start p-4 bg-gray-50 rounded-lg">
@@ -911,8 +1062,8 @@ const WhyUsSection = () => {
                             <p className="mb-2">“我们是将Meta级的AI技术和营销经验、经过验证的规模化工程能力、以及来自Medical Spa一线战场的行业洞察，三者深度融合的唯一团队。“</p>
                             <p className="font-semibold">“我们建造的不仅是工具，更是您赢得北美市场的战略竞争优势。”</p>
                         </blockquote>
-                    </div>
-                </div>
+            </div>
+        </div>
             )}
         </section>
     );
@@ -946,7 +1097,7 @@ const NextStepsSection = () => (
             </button>
         </div>
         <div className="mt-8 bg-gray-100 p-4 rounded-lg text-center">
-            <p className="text-black-600 font-semibold text-lg md:text-xl">Goaly AI出海GTM营销引擎 - 专为医美仪器出海企业打造的"战略大脑"</p>
+            <p className="text-black-600 font-semibold text-lg md:text-xl">AI出海GTM营销引擎 - 专为医美仪器出海企业打造的"战略大脑"</p>
             <p className="mt-4">CEO：Bella Zhu | 前Meta广告技术负责人 | Llama开源模型核心贡献者 | 十亿级用户产品研发到落地经验 </p>
             <p className="mt-1">
                 <a href="#" className="text-black-500 hover:underline">Email: </a>  

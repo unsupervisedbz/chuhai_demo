@@ -75,7 +75,7 @@ export default function RealEstateDemo() {
 // Header Component
 const Header = () => (
   <header className="text-center mb-8 md:mb-12">
-    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text">Goaly AI出海GTM营销引擎</h1>
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text">AI出海GTM营销引擎</h1>
     <p className="mt-2 md:mt-4 text-lg md:text-2xl text-gray-600">Real Estate Marketing Intelligence Platform</p>
     <p className="mt-4 text-base md:text-lg max-w-3xl mx-auto bg-blue-100 text-blue-800 p-3 rounded-lg border border-blue-200">
       "当所有地产公司都在卖'地段'和'价格'，我们卖的是——没人敢说的真相，和精准打中的空白市场。"
@@ -480,7 +480,7 @@ const NextStepsSection = () => (
             </button>
         </div>
         <div className="mt-8 bg-gray-100 p-4 rounded-lg text-center">
-            <p className="text-black-600 font-semibold text-lg md:text-xl">Goaly AI出海GTM营销引擎 - 专为电商企业打造的"增长大脑"</p>
+            <p className="text-black-600 font-semibold text-lg md:text-xl">AI出海GTM营销引擎 - 专为电商企业打造的"增长大脑"</p>
             <p className="mt-4">CEO：Bella Zhu | 前Meta广告技术负责人 | Llama开源模型核心贡献者 | 十亿级用户产品研发到落地经验 </p>
             <p className="mt-1">
                 <a href="#" className="text-black-500 hover:underline">Email: </a>  
