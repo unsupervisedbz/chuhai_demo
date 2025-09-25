@@ -125,8 +125,8 @@ const ProblemSection = () => (
                     <p><strong>渠道模式雷同：</strong>全都依赖平台流量，用"低价+促销"拼销量。</p>
                 </div>
                 <div className="mt-4 bg-red-100 border border-red-200 text-red-800 p-3 rounded">
-                    <p className="font-bold">结果？</p>
-                    <p>客户只看价格，品牌无记忆点，毛利率被压缩到5%以下。企业陷入到无限的价格战恶性竞争。<span className="font-semibold">如何针对目标客户定制化选品+差异化营销，是每个出海电商企业必须解决的问题。</span></p>
+                    {/* <p className="font-bold">结果？</p>
+                    <p>客户只看价格，品牌无记忆点，毛利率被压缩到5%以下。企业陷入到无限的价格战恶性竞争。<span className="font-semibold">如何针对目标客户定制化选品+差异化营销，是每个出海电商企业必须解决的问题。</span></p> */}
                 </div>
             </div>
 
