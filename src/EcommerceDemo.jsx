@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // Ecommerce Demo Component
 export default function EcommerceDemo() {
   const [activeTab, setActiveTab] = useState('problem');
+  const [showPositioningWorkflow, setShowPositioningWorkflow] = useState(false);
 
   // Update page title
   React.useEffect(() => {
@@ -16,13 +17,11 @@ export default function EcommerceDemo() {
       case 'solution':
         return <SolutionSection />;
       case 'features':
-        return <FeaturesSection />;
+        return <FeaturesSection showPositioningWorkflow={showPositioningWorkflow} setShowPositioningWorkflow={setShowPositioningWorkflow} />;
       case 'results':
         return <CaseStudiesSection />;
       case 'why-us':
         return <WhyUsSection />;
-      case 'next-steps':
-        return <NextStepsSection />;
       default:
         return <ProblemSection />;
     }
@@ -91,7 +90,6 @@ const Tabs = ({ activeTab, setActiveTab }) => {
     { id: 'features', label: '核心功能' },
       { id: 'results', label: '业界成功案例' },
     { id: 'why-us', label: '为何是我们' },
-    { id: 'next-steps', label: '下一步' },
   ];
 
   return (
@@ -170,6 +168,25 @@ const SolutionSection = () => {
             </h2>
             <p className="text-gray-700 text-base md:text-lg mb-6">我们不是卖软件，是为您打造一个自动分析、自动决策、自动落地的AI营销引擎，专为出海电商企业定制。</p>
             
+            {/* 解决方案核心要点 */}
+            <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                <h3 className="text-lg font-bold text-blue-800 mb-4">💡 解决方案核心要点</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="bg-white p-4 rounded-lg border border-blue-200">
+                        <h4 className="font-semibold text-blue-700 mb-3">1. 一体式Marketing+Sales系统</h4>
+                        <p className="text-gray-700 text-sm">解决市场、销售、内容制作部门之间信息流通障碍、关键信息丢失/不一致导致的转化率瓶颈</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-blue-200">
+                        <h4 className="font-semibold text-blue-700 mb-3">2. 企业专属AI模型</h4>
+                        <p className="text-gray-700 text-sm">根据企业已有的工作流程和数据闭环生成企业专属模型，智能调用相关ERP、CRM、EHR等系统，支持国内、海外两套营销工具生态系统，提升市场、销售部门的工作效率</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-blue-200">
+                        <h4 className="font-semibold text-blue-700 mb-3">3. 多模态本地化素材生成</h4>
+                        <p className="text-gray-700 text-sm">多模态本地化宣传素材生成 + AI虚拟人IG/TikTok广告，为中小型电商公司节省内容成本</p>
+                    </div>
+                </div>
+            </div>
+            
             {/* Sub-tabs */}
             <div className="mb-6">
                 <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
@@ -209,16 +226,16 @@ const SolutionSection = () => {
                                 <div className="text-sm font-medium text-blue-800">AI虚拟人</div>
                             </div>
                             <div className="bg-blue-50 border border-blue-200 p-3 rounded text-center">
-                                <div className="text-sm font-medium text-blue-800">专属模型</div>
+                                <div className="text-sm font-medium text-blue-800">AI推理规划</div>
                             </div>
                             <div className="bg-blue-50 border border-blue-200 p-3 rounded text-center">
-                                <div className="text-sm font-medium text-blue-800">3D建模渲染</div>
+                                <div className="text-sm font-medium text-blue-800">营销专属模型++工具生态系统</div>
                             </div>
                             <div className="bg-blue-50 border border-blue-200 p-3 rounded text-center">
-                                <div className="text-sm font-medium text-blue-800">AI多模态识别</div>
+                                <div className="text-sm font-medium text-blue-800">AI多模态识别 & 视频/音频/图片生成</div>
                             </div>
                             <div className="bg-blue-50 border border-blue-200 p-3 rounded text-center">
-                                <div className="text-sm font-medium text-blue-800">AI智能计算</div>
+                                <div className="text-sm font-medium text-blue-800">AI CRM</div>
                             </div>
                         </div>
                     </div>
@@ -483,13 +500,13 @@ const SolutionSection = () => {
     );
 };
 
-const FeaturesSection = () => (
+const FeaturesSection = ({ showPositioningWorkflow, setShowPositioningWorkflow }) => (
     <section>
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-800">核心功能模块：四维AI驱动，从洞察到成交</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg border">
                 <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块一：AI客户洞察引擎</h3>
-                <p className="text-gray-600 mb-3">深度了解客户，不看表面数据。实时分析用户行为、购买偏好、生命周期价值。</p>
+                <p className="text-gray-600 mb-3">深度了解客户，不看表面数据。实时分析用户行为、购买偏好、生命周期价值。定位核心目标群体。</p>
                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
                     <li>追踪用户购买路径和决策节点</li>
                     <li>分析季节性需求和趋势变化</li>
@@ -499,10 +516,117 @@ const FeaturesSection = () => (
                 {/* <p className="mt-3 bg-yellow-100 text-yellow-800 p-2 text-sm rounded">💡 <strong>案例发现：</strong>AI发现您的客户中25%是"冲动购买型"，但现有营销策略完全忽略了这一群体——这就是您的机会。</p> */}
             </div>
             <div className="bg-gray-50 p-6 rounded-lg border">
-                <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块二：AI智能选品</h3>
-                <p className="text-gray-600 mb-3">千人千面，精准触达。基于用户画像和行为数据，生成个性化营销内容。</p>
+                <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块二：AI智能选品 + 营销内容生成</h3>
+                {/* <p className="text-gray-600 mb-3">千人千面，精准触达。基于用户画像和行为数据，生成个性化营销内容。</p> */}
                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
-                    <li>智能产品定位推荐 + 差异度策略</li>
+                            <li>
+                                智能产品定位推荐 + 差异度策略 <span 
+                                    className="text-blue-600 hover:text-blue-800 hover:underline cursor-pointer font-medium"
+                                    onClick={() => setShowPositioningWorkflow(!showPositioningWorkflow)}
+                                >
+                                    (细节流程)
+                                </span>
+                        {showPositioningWorkflow && (
+                            <div className="mt-4 bg-white p-4 rounded-lg border border-blue-200">
+                                <h4 className="font-semibold text-blue-700 mb-3">🎯 智能产品定位实施流程</h4>
+                                <div className="space-y-4">
+                                    {/* Phase 1 */}
+                                    <div className="border-l-4 border-blue-500 pl-4">
+                                        <h5 className="font-semibold text-gray-800 mb-2">第一阶段：调研分析</h5>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">客户调研</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 基于AI的客户反馈情感分析</li>
+                                                    <li>• 使用预测分析识别高价值客户群体</li>
+                                                    <li>• 绘制客户旅程和痛点地图</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">竞品分析</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 部署自动化竞品监控工具</li>
+                                                    <li>• 分析竞品全渠道定位策略</li>
+                                                    <li>• 识别定位空白和机会点</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Phase 2 */}
+                                    <div className="border-l-4 border-green-500 pl-4">
+                                        <h5 className="font-semibold text-gray-800 mb-2">第二阶段：策略制定</h5>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">产品定位框架创建</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 基于数据洞察定义独特价值主张</li>
+                                                    <li>• 选择主要定位类型（功能/情感/象征/体验）</li>
+                                                    <li>• 制定定位声明和传播架构</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">差异化策略</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 基于客户数据优先差异化维度</li>
+                                                    <li>• 创建竞争优势地图</li>
+                                                    <li>• 设计独特销售主张(USP)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Phase 3 */}
+                                    <div className="border-l-4 border-yellow-500 pl-4">
+                                        <h5 className="font-semibold text-gray-800 mb-2">第三阶段：执行测试</h5>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">内容开发</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 使用AI写作工具创建产品定位素材</li>
+                                                    <li>• 制定多渠道传播策略</li>
+                                                    <li>• 为销售/营销团队建立营销定位白皮书 + 话术模版</li>
+                                                    <li>• 在所有营销素材中体现产品定位 保证Marketing+Sales内容一致性</li>
+                                                    <li>• 结合真人客户评测反馈 + AI虚拟海外用户群体调研 + 产品使用反馈分析，不断优化产品定位</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">A/B测试与优化</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 跨渠道测试定位信息</li>
+                                                    <li>• 使用AI分析衡量定位效果</li>
+                                                    <li>• 基于性能数据迭代优化</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Phase 4 */}
+                                    <div className="border-l-4 border-purple-500 pl-4">
+                                        <h5 className="font-semibold text-gray-800 mb-2">第四阶段：监控优化 (持续进行)</h5>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">性能追踪</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 监控品牌感知指标</li>
+                                                    <li>• 追踪竞品定位变化</li>
+                                                    <li>• 测量市场响应和转化率</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div className="font-medium text-gray-700 mb-1">持续优化</div>
+                                                <ul className="text-gray-600 space-y-1">
+                                                    <li>• 使用预测分析调整定位</li>
+                                                    <li>• 基于市场反馈更新定位</li>
+                                                    <li>• 季度性完善差异化策略</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </li>
                     <li>动态定价策略优化</li>
                     <li>个性化网站+社交媒体宣传素材生成，本地化素材转化</li>
                 </ul>
@@ -516,7 +640,7 @@ const FeaturesSection = () => (
                 </div>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg border">
-                <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块三：AI营销自动化引擎</h3>
+                <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块三：AI营销流程自动化</h3>
                 <p className="text-gray-600 mb-3">从"手动营销"到"智能营销"。AI自动执行营销策略，24/7不间断优化。</p>
                 <div className="overflow-x-auto bg-white rounded shadow-sm border">
                     <table className="w-full text-xs text-left text-gray-600">
@@ -781,48 +905,23 @@ const WhyUsSection = () => {
                             <p className="font-semibold">"我们建造的不仅是工具，更是您赢得电商市场的战略竞争优势。"</p>
                         </blockquote>
                     </div>
+                    
+                    {/* Contact Information */}
+                    <div className="mt-8 p-6 bg-gray-50 rounded-lg border">
+                        <h4 className="text-lg font-bold text-gray-800 mb-3">联系我们</h4>
+                        <div className="text-gray-700">
+                            <p className="font-medium">Bella Zhu</p>
+                            <p className="text-blue-600 hover:text-blue-800">
+                                <a href="mailto:bella@goaly.ai">bella@goaly.ai</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             )}
         </section>
     );
 };
 
-const NextStepsSection = () => (
-    <section>
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">下一步：让您的电商，成为行业增长的新标准</h2>
-        <p className="text-lg text-gray-600 mb-8">我们不卖产品，我们帮您重新定义"电商增长"是什么。现在，您有三个选择：</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="p-6 border rounded-lg hover:shadow-xl transition-shadow">
-                <p className="text-4xl mb-2">📉</p>
-                <h4 className="font-bold">继续卷价格</h4>
-                <p className="text-gray-500">利润被压缩到地板</p>
-            </div>
-            <div className="p-6 border rounded-lg hover:shadow-xl transition-shadow">
-                <p className="text-4xl mb-2">🤷‍♂️</p>
-                <h4 className="font-bold">花钱买工具</h4>
-                <p className="text-gray-500">花$50万，等6个月</p>
-            </div>
-            <div className="p-6 border-2 border-blue-500 rounded-lg shadow-lg bg-blue-50 hover:shadow-2xl transition-shadow">
-                <p className="text-4xl mb-2">✅</p>
-                <h4 className="font-bold text-blue-600">接入AI引擎</h4>
-                <p className="text-gray-500">7天内获得"增长突围方案"</p>
-            </div>
-        </div>
-        <div className="mt-10 text-center">
-            <button className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors text-lg">
-                📞 联系我们，开启您的"非价格战"电商增长之旅
-            </button>
-        </div>
-        <div className="mt-8 bg-gray-100 p-4 rounded-lg text-center">
-            <p className="text-black-600 font-semibold text-lg md:text-xl">Goaly AI出海GTM营销引擎 - 专为电商企业打造的"增长大脑"</p>
-            <p className="mt-4">CEO：Bella Zhu | 前Meta广告技术负责人 | Llama开源模型核心贡献者 | 十亿级用户产品研发到落地经验 </p>
-            <p className="mt-1">
-                <a href="#" className="text-black-500 hover:underline">Email: </a>  
-                <a href="mailto:bella@goaly.ai" className="text-blue-500 hover:underline">bella@goaly.ai</a> 
-            </p>
-        </div>
-    </section>
-);
 
 // Footer Component
 const Footer = () => (

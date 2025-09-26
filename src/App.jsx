@@ -305,6 +305,26 @@ const SolutionSection = () => (
             我们的解决方案：您的北美市场“战略大脑”
         </h2>
         <p className="text-gray-700 text-base md:text-lg mb-6">我们不是卖软件，是为您打造一个自动分析、自动决策、自动落地的AI营销作战系统，专为医美仪器出海企业定制。</p>
+        
+        {/* 解决方案核心要点 */}
+        <div className="bg-blue-50 p-6 rounded-lg mb-6">
+            <h3 className="text-lg font-bold text-blue-800 mb-4">💡 解决方案核心要点</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 className="font-semibold text-blue-700 mb-3">1. 一体式Marketing+Sales系统</h4>
+                    <p className="text-gray-700 text-sm">解决市场、销售、内容制作部门之间信息流通障碍、关键信息丢失/不一致导致的转化率瓶颈</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 className="font-semibold text-blue-700 mb-3">2. 企业专属AI模型</h4>
+                    <p className="text-gray-700 text-sm">根据企业已有的工作流程和数据闭环生成企业专属模型，智能调用相关ERP、CRM、EHR等系统，支持国内、海外两套营销工具生态系统，提升市场、销售部门的工作效率</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 className="font-semibold text-blue-700 mb-3">3. 多模态本地化素材生成</h4>
+                    <p className="text-gray-700 text-sm">多模态本地化宣传素材生成 + AI虚拟人IG/TikTok广告，为中小型电商公司节省内容成本</p>
+                </div>
+            </div>
+        </div>
+
         <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
             <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">🤖 AI营销引擎架构图</h3>
             
@@ -560,7 +580,7 @@ const CaseStudiesSection = () => {
 
   return (
     <section>
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">案例展示：从战略到执行</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">模拟应用场景 & 业界成功案例</h2>
       <div className="mb-6 border-b border-gray-200">
         <nav className="flex -mb-px" aria-label="Sub-Tabs">
           {subTabs.map(tab => (
@@ -833,134 +853,34 @@ const IndustryCaseStudy = () => (
     <div>
         {/* 转化率提升案例 */}
         <div className="bg-blue-50 p-6 rounded-lg mb-6">
-            <h3 className="font-bold text-xl text-blue-700 mb-4">🚀 转化率提升案例</h3>
+            <h3 className="font-bold text-xl text-blue-700 mb-4">🚀 智能Lead评分: 转化率提升案例</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-4 rounded-lg">
                     <h4 className="font-semibold text-blue-600 mb-2">Grammarly</h4>
                     <p className="text-gray-600 mb-2">通过使用AI识别高意向Lead，将其升级计划的转化率提高了<strong>80%</strong></p>
-                    <p className="text-sm text-gray-500">来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">SuperAGI案例研究</a></p>
+                    {/* <p className="text-sm text-gray-500">来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">SuperAGI案例研究</a></p> */}
                 </div>
                 <div className="bg-white p-4 rounded-lg">
                     <h4 className="font-semibold text-blue-600 mb-2">科技SaaS提供商</h4>
                     <p className="text-gray-600 mb-2">实施AI驱动的Lead评分后，转化率提高了<strong>32%</strong></p>
-                    <p className="text-sm text-gray-500">来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">SuperAGI案例研究</a></p>
+                    {/* <p className="text-sm text-gray-500">来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">SuperAGI案例研究</a></p> */}
                 </div>
             </div>
-        </div>
-
-        {/* ROI和营销效率案例 */}
-        <div className="bg-green-50 p-6 rounded-lg mb-6">
-            <h3 className="font-bold text-xl text-green-700 mb-4">💰 ROI和营销效率提升</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-green-600 mb-2">星巴克</h4>
-                    <p className="text-gray-600 mb-2">营销ROI提高<strong>30%</strong></p>
-                    <p className="text-sm text-gray-500">来源: <a href="https://www.brandxr.io/ai-powered-personalization-personalized-customer-experiences-at-scale" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">BrandXR</a></p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-green-600 mb-2">Netflix</h4>
-                    <p className="text-gray-600 mb-2">通过AI个人定制化内容ROI提升30%，每年节省<strong>$10亿</strong></p>
-                    <p className="text-sm text-gray-500">来源: <a href="https://www.brandxr.io/ai-powered-personalization-personalized-customer-experiences-at-scale" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">BrandXR</a></p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-green-600 mb-2">BCG研究数据</h4>
-                    <p className="text-gray-600 mb-2">深度投资AI的组织平均看到销售ROI提高<strong>10-20%</strong></p>
-                    <p className="text-sm text-gray-500">来源: <a href="https://www.bcg.com/publications/2025/closing-the-ai-impact-gap" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">BCG报告</a></p>
-                </div>
-            </div>
-        </div>
-
-        {/* 行业特定案例 */}
-        <div className="bg-purple-50 p-6 rounded-lg mb-6">
-            <h3 className="font-bold text-xl text-purple-700 mb-4">🏭 行业特定成功案例</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-purple-600 mb-2">制造设备供应商</h4>
-                    <p className="text-gray-600 mb-2">通过AI驱动的Lead评分实现了<strong>27%的收入增长</strong></p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-purple-600 mb-2">金融服务公司</h4>
-                    <p className="text-gray-600 mb-2">通过使用AI评分专注于准备购买的客户，销售周期缩短了<strong>41%</strong></p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-purple-600 mb-2">医疗技术提供商</h4>
-                    <p className="text-gray-600 mb-2">通过AI Lead评分优化营销支出，ROI提高了<strong>35%</strong></p>
-                </div>
-                <div className="bg-white p-4 rounded-lg">
-                    <h4 className="font-semibold text-purple-600 mb-2">行为定向优化</h4>
-                    <p className="text-gray-600 mb-2">使用行为数据进行定向广告和个性化内容可以将转化率提高<strong>10%</strong></p>
-                    <p className="text-sm text-gray-500">来源: <a href="https://dragonflyai.co/resources/blog/how-ai-boosts-conversion-rates-with-predictive-attention-insights" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">DragonFly AI</a></p>
-                </div>
-            </div>
-        </div>
-
-        {/* 销售自动化效率提升 */}
-        <div className="bg-orange-50 p-6 rounded-lg mb-6">
-            <h3 className="font-bold text-xl text-orange-700 mb-4">⏰ 销售自动化效率提升</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
+            
+            {/* 关键数据洞察 */}
+            <div className="mt-6">
+                <h4 className="font-bold text-lg text-blue-700 mb-4">📊 关键数据洞察</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-white p-4 rounded-lg">
-                        <h4 className="font-semibold text-orange-600 mb-2">日常时间节省</h4>
-                        <ul className="text-sm text-gray-600 space-y-2">
-                            <li>• 销售专业人员通过AI自动化节省<strong>2小时15分钟/天</strong></li>
-                            <li>• 78%认为AI帮助他们专注于最关键的工作</li>
-                            <li>• 员工使用GenAI平均每天节省<strong>1.75小时</strong></li>
-                            <li>• 电商团队采用AI后平均每周节省<strong>6.4小时</strong></li>
-                        </ul>
-                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://www.venasolutions.com/blog/ai-statistics" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">Vena Solutions</a></p>
-                    </div>
-                    <div className="bg-white p-4 rounded-lg">
-                        <h4 className="font-semibold text-orange-600 mb-2">生产力提升</h4>
-                        <ul className="text-sm text-gray-600 space-y-2">
-                            <li>• 使用AI工具后工作效率提升<strong>66%</strong></li>
-                            <li>• 相当于美国47年的自然生产力增长</li>
-                            <li>• 80%的员工认为AI提升了他们的生产力</li>
-                            <li>• 哈佛研究：管理咨询师完成任务速度提升<strong>25.1%</strong></li>
-                        </ul>
-                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://www.venasolutions.com/blog/ai-statistics" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">Vena Solutions</a></p>
-                    </div>
-                </div>
-                <div className="space-y-4">
-                    <div className="bg-white p-4 rounded-lg">
-                        <h4 className="font-semibold text-orange-600 mb-2">收入影响</h4>
-                        <ul className="text-sm text-gray-600 space-y-2">
-                            <li>• 采用AI销售工具的公司收入平均增长<strong>15%</strong></li>
-                            <li>• 销售成本降低<strong>12%</strong></li>
-                            <li>• 销售合格Lead增长<strong>25%</strong></li>
-                        </ul>
-                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://superagi.com/top-10-ai-tools-to-boost-sales-productivity-and-reduce-costs-in-2025/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">SuperAGI</a> | <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">McKinsey</a></p>
-                    </div>
-                    <div className="bg-white p-4 rounded-lg">
-                        <h4 className="font-semibold text-orange-600 mb-2">成本降低</h4>
-                        <ul className="text-sm text-gray-600 space-y-2">
-                            <li>• 33%的企业使用Gen AI工具降低成本</li>
-                            <li>• 54%的企业报告至少<strong>1%</strong>的积极结果</li>
-                            <li>• 14%的企业实现<strong>11%</strong>或更高的改进</li>
-                            <li>• 97%的高级商业领袖报告AI投资正回报</li>
-                        </ul>
-                        <p className="text-xs text-gray-500 mt-2">来源: <a href="https://www.venasolutions.com/blog/ai-statistics" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">Vena Solutions</a> | <a href="https://indatalabs.com/blog/ai-cost-reduction" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">InData Labs</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {/* 关键数据洞察 */}
-        <div className="bg-yellow-50 p-6 rounded-lg">
-            <h3 className="font-bold text-xl text-yellow-700 mb-4">📊 关键数据洞察</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                    <div className="bg-white p-4 rounded-lg">
-                        <h4 className="font-semibold text-yellow-600 mb-2">AI Lead评分效果</h4>
+                        <h5 className="font-semibold text-blue-600 mb-2">AI Lead评分效果</h5>
                         <ul className="text-sm text-gray-600 space-y-1">
                             <li>• Lead资格认定准确性提高<strong>40%</strong></li>
                             <li>• 转化率提高<strong>40%</strong>，误判率降低<strong>30%</strong></li>
                             <li>• 高绩效公司可达到<strong>6%</strong>转化率（vs 3.2%平均）</li>
                         </ul>
                     </div>
-                </div>
-                <div className="space-y-3">
                     <div className="bg-white p-4 rounded-lg">
-                        <h4 className="font-semibold text-yellow-600 mb-2">时机影响</h4>
+                        <h5 className="font-semibold text-blue-600 mb-2">时机影响</h5>
                         <ul className="text-sm text-gray-600 space-y-1">
                             <li>• 第一小时内跟进Lead转化率提高到<strong>53%</strong></li>
                             <li>• 预测性Lead评分使用增长<strong>14倍</strong></li>
@@ -968,8 +888,98 @@ const IndustryCaseStudy = () => (
                         </ul>
                     </div>
                 </div>
+                <p className="mt-4 text-sm text-gray-500 text-center">数据来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">SuperAGI案例研究</a> | <a href="https://iterable.com/blog/15-stats-roi-ai-marketing/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Iterable</a></p>
             </div>
-            <p className="mt-4 text-sm text-gray-500 text-center">数据来源: <a href="https://superagi.com/case-study-how-ai-lead-scoring-boosted-conversion-rates-by-25-for-top-b2b-companies-in-2025/" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:underline">SuperAGI案例研究</a> | <a href="https://iterable.com/blog/15-stats-roi-ai-marketing/" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:underline">Iterable</a></p>
+        </div>
+
+        {/* AI定制化营销提高商业表现 */}
+        <div className="bg-indigo-50 p-6 rounded-lg mb-6">
+            <h3 className="font-bold text-xl text-indigo-700 mb-4">🎯 AI定制化营销：商业表现提升数据</h3>
+            <div className="overflow-x-auto bg-white rounded-lg shadow-sm border">
+                <table className="w-full text-sm border-collapse border border-gray-300">
+                    <thead>
+                        <tr className="bg-indigo-50">
+                            <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-indigo-800">营销指标</th>
+                            <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-indigo-800">AI定制化影响</th>
+                            <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-indigo-800">数据来源</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">使用AI定制化的营销人员</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>59%</strong>的营销人员（企业级）</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">Salesforce调查</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">平均ROI改善</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>+25%</strong>营销ROI</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">Accenture研究</td>
+                        </tr>
+                        <tr>
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">定制化带来的销售增长</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>+20%</strong>销售提升</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">BCG分析</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">参与度</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>2倍</strong>更高的客户参与度</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">Statista/调查</td>
+                        </tr>
+                        <tr>
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">转化率</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>1.7倍</strong>更高的转化率</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">HubSpot数据</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">客户流失减少</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>-28%</strong>流失率（客户流失）</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">Gartner</td>
+                        </tr>
+                        <tr>
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">客户满意度</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>+30%</strong>CSAT分数</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">Forrester</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">推荐产生的收入</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>35%</strong>的亚马逊电商收入</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">McKinsey</td>
+                        </tr>
+                        <tr>
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">快速增长者vs缓慢增长者收入</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>+40%</strong>定制化收入（领先者）</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">McKinsey</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                            <td className="border border-gray-300 px-4 py-3 font-medium text-gray-800">营销成本降低</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-700"><strong>-50%</strong>更低获客成本（最高）</td>
+                            <td className="border border-gray-300 px-4 py-3 text-gray-600">McKinsey</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            {/* 额外ROI和营销效率案例 */}
+            <div className="mt-6">
+                <h4 className="font-bold text-lg text-indigo-700 mb-4">💰 公司ROI和营销效率提升案例</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="bg-white p-4 rounded-lg border border-indigo-200">
+                        <h5 className="font-semibold text-indigo-600 mb-2">星巴克</h5>
+                        <p className="text-gray-600 mb-2">营销ROI提高<strong>30%</strong></p>
+                        <p className="text-sm text-gray-500">来源: <a href="https://www.brandxr.io/ai-powered-personalization-personalized-customer-experiences-at-scale" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">BrandXR</a></p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-indigo-200">
+                        <h5 className="font-semibold text-indigo-600 mb-2">Netflix</h5>
+                        <p className="text-gray-600 mb-2">通过AI个人定制化内容ROI提升30%，每年节省<strong>$10亿</strong></p>
+                        <p className="text-sm text-gray-500">来源: <a href="https://www.brandxr.io/ai-powered-personalization-personalized-customer-experiences-at-scale" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">BrandXR</a></p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-indigo-200">
+                        <h5 className="font-semibold text-indigo-600 mb-2">BCG研究数据</h5>
+                        <p className="text-gray-600 mb-2">深度投资AI的组织平均看到销售ROI提高<strong>10-20%</strong></p>
+                        <p className="text-sm text-gray-500">来源: <a href="https://www.bcg.com/publications/2025/closing-the-ai-impact-gap" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">BCG报告</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 );
