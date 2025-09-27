@@ -209,7 +209,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
     { id: 'features', label: '核心功能' },
     { id: 'results', label: '案例展示' },
     { id: 'why-us', label: '为何是我们' },
-    { id: 'next-steps', label: '下一步' },
+    // { id: 'next-steps', label: '下一步' },
   ];
 
   return (
@@ -312,7 +312,7 @@ const SolutionSection = () => (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white p-4 rounded-lg border border-blue-200">
                     <h4 className="font-semibold text-blue-700 mb-3">1. 一体式Marketing+Sales系统</h4>
-                    <p className="text-gray-700 text-sm">解决市场、销售、内容制作部门之间信息流通障碍、关键信息丢失/不一致导致的转化率瓶颈</p>
+                    <p className="text-gray-700 text-sm">解决市场、销售、内容制作部门之间信息流通障碍、或者广告投放得到的潜在客户没有销售及时转化， 或者关键信息丢失/不一致导致的转化率瓶颈</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-blue-200">
                     <h4 className="font-semibold text-blue-700 mb-3">2. 企业专属AI模型</h4>
@@ -985,30 +985,14 @@ const IndustryCaseStudy = () => (
 );
 
 const WhyUsSection = () => {
-    const [activeSubTab, setActiveSubTab] = useState('advantage');
 
     return (
         <section>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">为什么选择我们？</h2>
-             <div className="mb-6 border-b border-gray-200">
-                <nav className="flex -mb-px" aria-label="Sub-Tabs">
-                    <button
-                        onClick={() => setActiveSubTab('advantage')}
-                        className={`sub-tab-btn text-sm md:text-base mr-4 py-3 px-1 border-b-2 font-medium ${activeSubTab === 'advantage' ? 'sub-tab-active' : 'sub-tab-inactive'}`}
-                    >
-                        核心优势
-                    </button>
-                    <button
-                        onClick={() => setActiveSubTab('team')}
-                        className={`sub-tab-btn text-sm md:text-base mr-4 py-3 px-1 border-b-2 font-medium ${activeSubTab === 'team' ? 'sub-tab-active' : 'sub-tab-inactive'}`}
-                    >
-                        我们的团队
-                    </button>
-                </nav>
-            </div>
 
-            {activeSubTab === 'advantage' && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                {/* 核心优势 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     <div className="border rounded-lg p-4 bg-red-50">
                         <h4 className="font-bold text-red-600 text-lg">传统工具</h4>
                         <ul className="list-disc list-inside mt-2 text-red-900">
@@ -1032,11 +1016,11 @@ const WhyUsSection = () => {
                         </ul>
                     </div>
                 </div>
-            )}
-            
-            {activeSubTab === 'team' && (
-                 <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">技术与行业的完美融合</h3>
+
+                {/* 我们的团队 */}
+                <div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">我们的团队</h3>
+                    <h4 className="text-lg font-semibold text-gray-700 mb-4">技术与行业的完美融合</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="flex items-start p-4 bg-gray-50 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M12 10.5h.01M12 13.5h.01M12 16.5h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -1069,12 +1053,13 @@ const WhyUsSection = () => {
                     </div>
                     <div className="mt-8">
                         <blockquote className="p-4 italic border-l-4 bg-blue-50 text-blue-800 border-blue-500 rounded-r-lg">
-                            <p className="mb-2">“我们是将Meta级的AI技术和营销经验、经过验证的规模化工程能力、以及来自Medical Spa一线战场的行业洞察，三者深度融合的唯一团队。“</p>
-                            <p className="font-semibold">“我们建造的不仅是工具，更是您赢得北美市场的战略竞争优势。”</p>
+                            <p className="mb-2">"我们是将Meta级的AI技术和营销经验、经过验证的规模化工程能力、以及来自Medical Spa一线战场的行业洞察，三者深度融合的唯一团队。"</p>
+                            <p className="font-semibold">"我们建造的不仅是工具，更是您赢得北美市场的战略竞争优势。"</p>
                         </blockquote>
+                    </div>
+                </div>
             </div>
-        </div>
-            )}
+            
         </section>
     );
 };

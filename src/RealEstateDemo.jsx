@@ -91,7 +91,7 @@ const Tabs = ({ activeTab, setActiveTab }) => {
     { id: 'features', label: '核心功能' },
     { id: 'results', label: '案例展示' },
     { id: 'why-us', label: '为何是我们' },
-    { id: 'next-steps', label: '下一步' },
+    // { id: 'next-steps', label: '下一步' },
   ];
 
   return (
@@ -156,6 +156,26 @@ const SolutionSection = () => (
             我们的解决方案：您的地产营销"智能大脑"
         </h2>
         <p className="text-gray-700 text-base md:text-lg mb-6">我们不是卖软件，是为您打造一个自动分析、自动决策、自动落地的AI地产营销作战系统，专为地产企业定制。</p>
+        
+        {/* 解决方案核心要点 */}
+        <div className="bg-blue-50 p-6 rounded-lg mb-6">
+            <h3 className="text-lg font-bold text-blue-800 mb-4">💡 解决方案核心要点</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 className="font-semibold text-blue-700 mb-3">1. 一体式Marketing+Sales系统</h4>
+                    <p className="text-gray-700 text-sm">解决市场、销售、内容制作部门之间信息流通障碍、或者广告投放得到的潜在客户没有销售及时转化， 或者关键信息丢失/不一致导致的转化率瓶颈</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 className="font-semibold text-blue-700 mb-3">2. 企业专属AI模型</h4>
+                    <p className="text-gray-700 text-sm">根据企业已有的工作流程和数据闭环生成企业专属模型，智能调用相关ERP、CRM、EHR等系统，支持国内、海外两套营销工具生态系统，提升市场、销售部门的工作效率</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                    <h4 className="font-semibold text-blue-700 mb-3">3. 多模态本地化素材生成</h4>
+                    <p className="text-gray-700 text-sm">多模态本地化宣传素材生成 + AI虚拟人IG/TikTok广告，为中小型电商公司节省内容成本</p>
+                </div>
+            </div>
+        </div>
+        
         <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
             <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">🤖 AI营销引擎架构图</h3>
             
@@ -449,6 +469,48 @@ const WhyUsSection = () => (
         <div className="mt-8 bg-blue-600 text-white p-6 rounded-lg text-center">
             <h3 className="text-xl font-bold mb-2">💼 我们的收费模式：0年费 + 销售额5%成功分成</h3>
             <p>您不卖，我们不赚。我们是您的增长合伙人，不是供应商。</p>
+        </div>
+
+        {/* 我们的团队 */}
+        <div className="mt-8">
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-800">我们的团队</h3>
+            <h4 className="text-lg font-semibold text-gray-700 mb-4">技术与行业的完美融合</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start p-4 bg-gray-50 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.121 15.536c-1.171 1.952-3.07 1.952-4.242 0-1.172-1.953-1.172-5.119 0-7.072 1.171-1.952 3.07-1.952 4.242 0M12 10.5h.01M12 13.5h.01M12 16.5h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <div>
+                        <h4 className="font-semibold">前Meta Llama 核心研发团队</h4>
+                        <p className="text-gray-600 text-sm">拥有世界级AI大模型研发背景，奠定我们坚实的技术实力。</p>
+                    </div>
+                </div>
+                 <div className="flex items-start p-4 bg-gray-50 rounded-lg">
+                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                    <div>
+                        <h4 className="font-semibold">多年广告推荐算法经验</h4>
+                        <p className="text-gray-600 text-sm">拥有多年全球广告投放与增长实战经验，深谙用户增长和商业化逻辑，确保我们的营销策略能带来真实、可衡量的销售转化。</p>
+                    </div>
+                </div>
+                 <div className="flex items-start p-4 bg-gray-50 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 012-2h1.945C21.43 11.96 21.5 12.484 21.5 13v2.5a2.5 2.5 0 01-2.5 2.5h-13A2.5 2.5 0 013 15.5V13c0-.516.07-1.04.195-1.534-.055.165-.088.337-.11.516l-.03.218z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 11a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" /><path d="M12 3v3m0 3V3m0 3h2.5M12 6H9.5" stroke="#3B82F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <div>
+                        <h4 className="font-semibold">北美SMB企业运营经验</h4>
+                        <p className="text-gray-600 text-sm">熟悉北美营销递推策略和隐私/数据合规要求</p>
+                    </div>
+                </div>
+                <div className="flex items-start p-4 bg-gray-50 rounded-lg">
+                     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-blue-500 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 16v-2m8-8h2M4 12H2m15.364 6.364l-1.414-1.414M6.05 6.05l-1.414-1.414m12.728 0l-1.414 1.414M6.05 17.95l-1.414 1.414M12 18a6 6 0 100-12 6 6 0 000 12z" /></svg>
+                    <div>
+                        <h4 className="font-semibold">研发到落地全链路能力</h4>
+                        <p className="text-gray-600 text-sm">从市场调研 → 差异化定位 → 产品建议 → 本地化营销 → 渠道拓展，我们不是顾问，而是全链路执行的增长合伙人。</p>
+                    </div>
+                </div>
+            </div>
+            <div className="mt-8">
+                <blockquote className="p-4 italic border-l-4 bg-blue-50 text-blue-800 border-blue-500 rounded-r-lg">
+                    <p className="mb-2">"我们是将Meta级的AI技术和营销经验、经过验证的规模化工程能力、以及来自地产一线战场的行业洞察，三者深度融合的唯一团队。"</p>
+                    <p className="font-semibold">"我们建造的不仅是工具，更是您赢得地产市场的战略竞争优势。"</p>
+                </blockquote>
+            </div>
         </div>
     </section>
 );
