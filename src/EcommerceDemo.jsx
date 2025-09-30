@@ -485,7 +485,7 @@ const SolutionSection = () => {
                                         <div className="font-medium text-purple-800">Security & Privacy</div>
                                     </div>
                                     <div className="bg-purple-50 border border-purple-200 p-2 rounded text-xs text-center">
-                                        <div className="font-medium text-purple-800">Simulated Env</div>
+                                        <div className="font-medium text-purple-800">Simulated Environment</div>
                                     </div>
                                     <div className="bg-purple-50 border border-purple-200 p-2 rounded text-xs text-center">
                                         <div className="font-medium text-purple-800">Storage</div>
@@ -901,6 +901,11 @@ const WhyUsSection = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            {/* Footer */}
+            <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+                <p className="text-gray-600 font-medium">Bella Zhu | <a href="mailto:bella@goaly.ai" className="text-blue-600 hover:text-blue-800 hover:underline">bella@goaly.ai</a></p>
             </div>
             
         </section>

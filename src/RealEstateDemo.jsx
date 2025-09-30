@@ -118,31 +118,28 @@ const ProblemSection = () => (
         
         <div className="space-y-6">
             <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg">
-                <h3 className="text-xl font-bold text-orange-700 mb-4">问题1: 客户获取成本高</h3>
+                <h3 className="text-xl font-bold text-orange-700 mb-4">问题1: 客户获取成本高 转化率低</h3>
                 <div className="space-y-3 text-gray-700">
-                    <p><strong>获客成本不断攀升：</strong>传统地产营销获客成本从2019年的$200/人上升到2024年的$800/人。</p>
-                    <p><strong>转化率持续下降：</strong>营销转化率从15%下降到5%，大量营销预算浪费。</p>
-                    <p><strong>客户信任度低：</strong>过度营销导致客户对地产广告信任度降至历史低点。</p>
+                    <p><strong>客户转化率持续下降：</strong>营销转化率从15%下降到2-5%，大量营销预算浪费。</p>
+                    <p><strong>获客成本昂贵且不断攀升：</strong>营销经费占楼盘成交额的1-5%，获客成本高昂。</p>
+                </div>
+            </div>       
+
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
+                <h3 className="text-xl font-bold text-yellow-700 mb-4">问题2: 数据驱动决策、规划能力弱</h3>
+                <div className="space-y-3 text-gray-700">
+                    <p><strong>缺乏精准目标客户以及客户群体画像：</strong>无法准确识别高价值客户，营销资源分散 多部门协调问题导致转化率低。</p>
+                    <p><strong>市场趋势把握滞后：</strong>依赖传统调研，无法实时捕捉市场变化。</p>
+                    <p><strong>个性化营销能力不足：</strong>千人一面的营销内容，无法满足不同客户需求。</p>
                 </div>
             </div>
 
             <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                <h3 className="text-xl font-bold text-red-700 mb-4">问题2: 地产营销同质化困境</h3>
+                <h3 className="text-xl font-bold text-red-700 mb-4">问题3: 地产营销同质化困境</h3>
                 <div className="space-y-3 text-gray-700">
                     <p><strong>产品高度同质化：</strong>所有楼盘都强调"黄金地段"、"地铁直达"、"学区房"等相同卖点。</p>
                     <p><strong>营销文案高度复制：</strong>全网都是"投资首选"、"升值潜力"、"稀缺房源"。</p>
                     <p><strong>渠道模式雷同：</strong>全都依赖中介渠道，用"返点+优惠"拼价格。</p>
-                </div>
-            </div>
-
-            
-
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
-                <h3 className="text-xl font-bold text-yellow-700 mb-4">问题3: 数据驱动决策能力弱</h3>
-                <div className="space-y-3 text-gray-700">
-                    <p><strong>缺乏精准客户画像：</strong>无法准确识别高价值客户，营销资源分散。</p>
-                    <p><strong>市场趋势把握滞后：</strong>依赖传统调研，无法实时捕捉市场变化。</p>
-                    <p><strong>个性化营销能力不足：</strong>千人一面的营销内容，无法满足不同客户需求。</p>
                 </div>
             </div>
         </div>
@@ -339,7 +336,7 @@ const SolutionSection = () => (
                                 <div className="font-medium text-purple-800">Security & Privacy</div>
                             </div>
                             <div className="bg-purple-50 border border-purple-200 p-2 rounded text-xs text-center">
-                                <div className="font-medium text-purple-800">Simulated Env</div>
+                                <div className="font-medium text-purple-800">Simulated Environment</div>
                             </div>
                             <div className="bg-purple-50 border border-purple-200 p-2 rounded text-xs text-center">
                                 <div className="font-medium text-purple-800">Storage</div>
@@ -466,10 +463,10 @@ const WhyUsSection = () => (
                 </ul>
             </div>
         </div>
-        <div className="mt-8 bg-blue-600 text-white p-6 rounded-lg text-center">
+        {/* <div className="mt-8 bg-blue-600 text-white p-6 rounded-lg text-center">
             <h3 className="text-xl font-bold mb-2">💼 我们的收费模式：0年费 + 销售额5%成功分成</h3>
-            <p>您不卖，我们不赚。我们是您的增长合伙人，不是供应商。</p>
-        </div>
+            <p>结果付费。您不卖，我们不赚。我们是您的增长合伙人，不是供应商。</p>
+        </div> */}
 
         {/* 我们的团队 */}
         <div className="mt-8">
@@ -548,6 +545,11 @@ const NextStepsSection = () => (
                 <a href="#" className="text-black-500 hover:underline">Email: </a>  
                 <a href="mailto:bella@goaly.ai" className="text-blue-500 hover:underline">bella@goaly.ai</a> 
             </p>
+        </div>
+        
+        {/* Footer */}
+        <div className="mt-8 pt-8 border-t border-gray-200 text-center">
+            <p className="text-gray-600 font-medium">Bella Zhu | <a href="mailto:bella@goaly.ai" className="text-blue-600 hover:text-blue-800 hover:underline">bella@goaly.ai</a></p>
         </div>
     </section>
 );

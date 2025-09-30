@@ -247,7 +247,7 @@ const ProblemSection = () => {
                     </div>
                     <div className="mt-4 bg-red-100 border border-red-200 text-red-800 p-3 rounded">
                         <p className="font-bold">结果？</p>
-                        <p>客户只看价格，品牌无记忆点，毛利率被压缩到15%以下。企业陷入到无限的价格战恶性竞争，是<span className="font-semibold">美国60%的医美SPA亏损的直接原因。</span></p>
+                        <p>客户只看价格，品牌无记忆点，毛利率被压缩。企业陷入到无限的价格战恶性竞争，是<span className="font-semibold">美国60%的医美SPA营销低于业内平均的主要原因。</span></p>
                     </div>
                 </div>
 
@@ -281,7 +281,7 @@ const ProblemSection = () => {
 
                 {/* Problem 3: 落地周期长 成本高 */}
                 <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
-                    <h3 className="text-xl font-bold text-yellow-700 mb-4">问题3: 落地周期长 成本高</h3>
+                    <h3 className="text-xl font-bold text-yellow-700 mb-4">问题3: 落地周期长 获客成本高 转化率低</h3>
                     <div className="space-y-3 text-gray-700">
                         <p><strong>团队配置成本高：</strong>需要配备完整的市场+销售团队，包括市场调研、品牌定位、渠道拓展、客户服务等专业人员。</p>
                         <p><strong>时间周期长：</strong>整个流程动辄耗时数月，从市场调研到产品定位，从渠道建立到客户转化，每个环节都需要大量时间。</p>
@@ -302,9 +302,8 @@ const SolutionSection = () => (
             <section>
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-600 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
-            我们的解决方案：您的北美市场“战略大脑”
+            我们的解决方案：您的北美市场“营销增长引擎”
         </h2>
-        <p className="text-gray-700 text-base md:text-lg mb-6">我们不是卖软件，是为您打造一个自动分析、自动决策、自动落地的AI营销作战系统，专为医美仪器出海企业定制。</p>
         
         {/* 解决方案核心要点 */}
         <div className="bg-blue-50 p-6 rounded-lg mb-6">
@@ -313,6 +312,8 @@ const SolutionSection = () => (
                 <div className="bg-white p-4 rounded-lg border border-blue-200">
                     <h4 className="font-semibold text-blue-700 mb-3">1. 一体式Marketing+Sales系统</h4>
                     <p className="text-gray-700 text-sm">解决市场、销售、内容制作部门之间信息流通障碍、或者广告投放得到的潜在客户没有销售及时转化， 或者关键信息丢失/不一致导致的转化率瓶颈</p>
+                    <br />
+                    <p className="text-gray-700 text-sm">以最终结果（转化率，营业额）为导向，提升营销效率。</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-blue-200">
                     <h4 className="font-semibold text-blue-700 mb-3">2. 企业专属AI模型</h4>
@@ -488,7 +489,7 @@ const SolutionSection = () => (
                                 <div className="font-medium text-purple-800">Security & Privacy</div>
                             </div>
                             <div className="bg-purple-50 border border-purple-200 p-2 rounded text-xs text-center">
-                                <div className="font-medium text-purple-800">Simulated Env</div>
+                                <div className="font-medium text-purple-800">Simulated Environment</div>
                             </div>
                             <div className="bg-purple-50 border border-purple-200 p-2 rounded text-xs text-center">
                                 <div className="font-medium text-purple-800">Storage</div>
@@ -501,7 +502,23 @@ const SolutionSection = () => (
     </section>
 );
 
-const FeaturesSection = () => (
+const FeaturesSection = () => {
+    const [showCompetitiveWorkflow, setShowCompetitiveWorkflow] = useState(true);
+    const [expandedPhases, setExpandedPhases] = useState(new Set());
+
+    const togglePhase = (phaseId) => {
+        setExpandedPhases(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(phaseId)) {
+                newSet.delete(phaseId);
+            } else {
+                newSet.add(phaseId);
+            }
+            return newSet;
+        });
+    };
+
+    return (
     <section>
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-800">核心功能模块：四维AI驱动，从洞察到成交</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -518,14 +535,140 @@ const FeaturesSection = () => (
             </div>
             <div className="bg-gray-50 p-6 rounded-lg border">
                 <h3 className="font-bold text-lg text-blue-700 mb-2">✅ 模块二：竞品智能分析</h3>
-                <p className="text-gray-600 mb-3">知己知彼，找到您独一无二的"护城河"。</p>
-                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
-                    <li>全方位扫描竞争对手的产品矩阵和定价策略</li>
-                    <li>解析明星产品的成功要素和市场渗透路径</li>
-                    <li>基于SWOT框架的智能化分析，生成差异化定位和市场策略</li>
-                    <li>回到关键客户痛点分析，找出我们产品应该专注的真正重要优势</li>
-                    <li>基于数据驱动的方法分析我们产品与其他竞争对手的竞争优势和劣势</li>
-                </ul>
+                <p className="text-gray-600 mb-3">知己知彼，找到您独一无二的"护城河"。 <span 
+                    className="text-blue-600 hover:text-blue-800 hover:underline cursor-pointer font-medium"
+                    onClick={() => setShowCompetitiveWorkflow(!showCompetitiveWorkflow)}
+                >
+                    (详细流程)
+                </span></p>
+                {showCompetitiveWorkflow && (
+                    <div className="mt-4 bg-white p-4 rounded-lg border border-blue-200">
+                        <h4 className="font-semibold text-blue-700 mb-3">🎯 竞品智能分析实施流程</h4>
+                        <div className="space-y-4">
+                    {/* Phase 1 */}
+                    <div className="border-l-4 border-blue-500 pl-4">
+                        <h5 
+                            className="font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600 hover:underline"
+                            onClick={() => togglePhase('phase1')}
+                        >
+                            第一阶段：调研分析
+                        </h5>
+                        {expandedPhases.has('phase1') && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">客户调研</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 基于AI的客户反馈情感分析</li>
+                                        <li>• 使用预测分析识别高价值客户群体</li>
+                                        <li>• 绘制客户旅程和痛点地图</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">竞品分析</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 部署自动化竞品监控工具</li>
+                                        <li>• 分析竞品全渠道定位策略</li>
+                                        <li>• 识别定位空白和机会点</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    
+                    {/* Phase 2 */}
+                    <div className="border-l-4 border-green-500 pl-4">
+                        <h5 
+                            className="font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600 hover:underline"
+                            onClick={() => togglePhase('phase2')}
+                        >
+                            第二阶段：策略制定
+                        </h5>
+                        {expandedPhases.has('phase2') && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">产品定位框架创建</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 基于数据洞察定义独特价值主张</li>
+                                        <li>• 选择主要定位类型（功能/情感/象征/体验）</li>
+                                        <li>• 制定定位声明和传播架构</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">差异化策略</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 基于客户数据优先差异化维度</li>
+                                        <li>• 创建竞争优势地图</li>
+                                        <li>• 设计独特销售主张(USP)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    
+                    {/* Phase 3 */}
+                    <div className="border-l-4 border-yellow-500 pl-4">
+                        <h5 
+                            className="font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600 hover:underline"
+                            onClick={() => togglePhase('phase3')}
+                        >
+                            第三阶段：执行测试
+                        </h5>
+                        {expandedPhases.has('phase3') && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">内容开发</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 使用AI写作工具创建产品定位素材</li>
+                                        <li>• 制定多渠道传播策略</li>
+                                        <li>• 为销售/营销团队建立营销定位白皮书 + 话术模版</li>
+                                        <li>• 在所有营销素材中体现产品定位 保证Marketing+Sales内容一致性</li>
+                                        <li>• 结合真人客户评测反馈 + AI虚拟海外用户群体调研 + 产品使用反馈分析，不断优化产品定位</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">A/B测试与优化</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 跨渠道测试定位信息</li>
+                                        <li>• 使用AI分析衡量定位效果</li>
+                                        <li>• 基于性能数据迭代优化</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    
+                    {/* Phase 4 */}
+                    <div className="border-l-4 border-purple-500 pl-4">
+                        <h5 
+                            className="font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600 hover:underline"
+                            onClick={() => togglePhase('phase4')}
+                        >
+                            第四阶段：监控优化 (持续进行)
+                        </h5>
+                        {expandedPhases.has('phase4') && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">性能追踪</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 监控品牌感知指标</li>
+                                        <li>• 追踪竞品定位变化</li>
+                                        <li>• 测量市场响应和转化率</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div className="font-medium text-gray-700 mb-1">持续优化</div>
+                                    <ul className="text-gray-600 space-y-1">
+                                        <li>• 使用预测分析调整定位</li>
+                                        <li>• 基于市场反馈更新定位</li>
+                                        <li>• 季度性完善差异化策略</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                        </div>
+                    </div>
+                )}
                 {/* <div className="mt-3 bg-green-100 text-green-800 p-3 text-sm rounded">
                     <p className="font-semibold mb-2">🎯 <strong>输出结果：</strong></p>
                     <div className="space-y-1">
@@ -563,11 +706,12 @@ const FeaturesSection = () => (
                     <li><strong>6. 实时检测报告：</strong>实时跟踪数据：试用转化率、客户复购意向、社交媒体提及量、SPA推荐意愿等。</li>
                     <li><strong>7. 动态优化策略：</strong>如果某一个步骤的转化率低？AI自动建议换话术、换KOL、换定价模型</li>
                 </ol>
-                <p className="mt-3 bg-yellow-100 text-yellow-800 p-2 text-sm rounded"> 💯 <strong>“结果：传统方式6个月谈下5家合作 → AI引擎3周谈下12家，转化率提升210%。”</strong></p>
+                <p className="mt-3 bg-yellow-100 text-yellow-800 p-2 text-sm rounded"> 💯 <strong>"结果：传统方式6个月谈下5家合作 → AI引擎3周谈下12家，转化率提升210%。"</strong></p>
             </div>
         </div>
     </section>
-);
+    );
+};
 
 const CaseStudiesSection = () => {
   const [activeSubTab, setActiveSubTab] = useState('gtm');
@@ -629,7 +773,7 @@ const GTMCaseStudy = () => (
 
 // FlowChart Component for interactive boxes
 const FlowChart = () => {
-  const [expandedBoxes, setExpandedBoxes] = useState(new Set());
+  const [expandedBoxes, setExpandedBoxes] = useState(new Set(['market-insight', 'customer-pain', 'differentiation', 'concept-validation']));
 
   const flowchartData = [
     {
@@ -1058,6 +1202,11 @@ const WhyUsSection = () => {
                         </blockquote>
                     </div>
                 </div>
+            </div>
+            
+            {/* Footer */}
+            <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+                <p className="text-gray-600 font-medium">Bella Zhu | <a href="mailto:bella@goaly.ai" className="text-blue-600 hover:text-blue-800 hover:underline">bella@goaly.ai</a></p>
             </div>
             
         </section>
