@@ -354,7 +354,7 @@ const PlmSystemDesign = () => {
                                 </div>
                                 <div className="component">
                                     <div className="component-title">Function Calling</div>
-                                    <div className="component-desc">OpenAI / Claude - 函数调用接口</div>
+                                    <div className="component-desc">LLM Model - 函数调用接口</div>
                                 </div>
                             </div>
                         </div>
@@ -463,7 +463,7 @@ const PlmSystemDesign = () => {
                                 <h3>AI 框架</h3>
                                 <div className="tech-item">🤖 LangChain / LlamaIndex</div>
                                 <div className="tech-item">🤖 LangGraph / AutoGen</div>
-                                <div className="tech-item">🤖 OpenAI GPT-4 / Claude 3.5</div>
+                                <div className="tech-item">🤖 Post-trained LLM Model (grounded with your enterprise data)</div>
                             </div>
 
                             <div className="tech-category">
