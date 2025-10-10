@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import RealEstateDemo from './RealEstateDemo';
 import EcommerceDemo from './EcommerceDemo';
+import PlmSystemDesign from './PlmSystemDesign';
 
 // Main App Component with Routing
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/medical_equipment" element={<MarketingDemo />} />
         <Route path="/real_estate" element={<RealEstateDemo />} />
         <Route path="/ecommerce" element={<EcommerceDemo />} />
+        <Route path="/plm_data_platform" element={<PlmSystemDesign />} />
         <Route path="/" element={<LandingPage />} />
       </Routes>
     </Router>
