@@ -558,7 +558,7 @@ const PlmSystemDesign = () => {
                         <div className="legend-item">
                             <div className="legend-color" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%)'}}></div>
                             <div className="legend-color" style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}></div>
-                            <span>企业智能体研发: Solution Team </span>
+                            <span>企业智能体研发+运维: Solution Team </span>
                         </div>
                       
                         {/* <div className="legend-item">
