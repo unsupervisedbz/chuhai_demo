@@ -309,7 +309,7 @@ const PlmSystemDesign = () => {
                 <div className="container">
                     <div className="header">
                         <h1>🚀 System Architecture of Agent Ecosystem</h1>
-                        <p>医疗器械行业 · 智能化产品生命周期管理平台</p>
+                        <p>案例：医疗器械行业 - AI原生智能体生态系统</p>
                         <button id="download-pdf-btn" onClick={handleDownloadPdf}>Download as PDF</button>
                     </div>
 
