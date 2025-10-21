@@ -136,7 +136,7 @@ const PlmSystemDesign = () => {
                 }
 
                 .ai-layer {
-                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
                     color: white;
                 }
 
@@ -163,7 +163,7 @@ const PlmSystemDesign = () => {
                 }
 
                 .storage-layer {
-                    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+                    background: linear-gradient(135deg, #ca8a04 0%, #d97706 100%);
                     color: white;
                 }
 
@@ -177,6 +177,15 @@ const PlmSystemDesign = () => {
                 }
 
                 .processing-layer .layer-icon {
+                    background: rgba(255,255,255,0.2);
+                }
+
+                .model-matrix-layer {
+                    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+                    color: white;
+                }
+
+                .model-matrix-layer .layer-icon {
                     background: rgba(255,255,255,0.2);
                 }
 
@@ -299,7 +308,7 @@ const PlmSystemDesign = () => {
             <div id="content-to-print">
                 <div className="container">
                     <div className="header">
-                        <h1>🚀 AI-Native PLM 数据中台架构</h1>
+                        <h1>🚀 System Architecture of Agent Ecosystem</h1>
                         <p>医疗器械行业 · 智能化产品生命周期管理平台</p>
                         <button id="download-pdf-btn" onClick={handleDownloadPdf}>Download as PDF</button>
                     </div>
@@ -309,7 +318,7 @@ const PlmSystemDesign = () => {
                         <div className="layer ai-layer">
                             <div className="layer-title">
                                 <div className="layer-icon">🤖</div>
-                                AI Agent 生态层
+                                Agent Library
                             </div>
                             <div className="components-grid">
                                 <div className="component">
@@ -325,36 +334,20 @@ const PlmSystemDesign = () => {
                                     <div className="component-desc">FDA/ISO标准审查、自动生成合规报告</div>
                                 </div>
                                 <div className="component">
-                                    <div className="component-title">🔄 变更管理 Agent</div>
+                                    <div className="component-title">🔄 版本变更管理 Agent</div>
                                     <div className="component-desc">影响分析、风险预测、自动通知相关方</div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div className="connection-arrows">↕️</div>
-
-                        {/* Integration Layer */}
-                        <div className="layer integration-layer">
-                            <div className="layer-title">
-                                <div className="layer-icon">🔗</div>
-                                AI 集成层
-                            </div>
-                            <div className="components-grid">
                                 <div className="component">
-                                    <div className="component-title">Agent 编排引擎</div>
-                                    <div className="component-desc">LangGraph / AutoGen - Multi-Agent协作</div>
+                                    <div className="component-title">🎯 AI智能出图</div>
+                                    <div className="component-desc">智能草图生成、图纸合规检测</div>
                                 </div>
                                 <div className="component">
-                                    <div className="component-title">统一 API 网关</div>
-                                    <div className="component-desc">Kong / AWS API Gateway - GraphQL + REST + gRPC</div>
+                                    <div className="component-title">💬 智能问答+新员工培训</div>
+                                    <div className="component-desc">企业知识库问答、自动化员工培训</div>
                                 </div>
                                 <div className="component">
-                                    <div className="component-title">RAG 框架</div>
-                                    <div className="component-desc">LangChain / LlamaIndex - 检索增强生成</div>
-                                </div>
-                                <div className="component">
-                                    <div className="component-title">Function Calling</div>
-                                    <div className="component-desc">LLM Model - 函数调用接口</div>
+                                    <div className="component-title">🧪 测试方案生成</div>
+                                    <div className="component-desc">根据测试部门需求，生成测试方案、用例</div>
                                 </div>
                             </div>
                         </div>
@@ -365,7 +358,7 @@ const PlmSystemDesign = () => {
                         <div className="layer application-layer">
                             <div className="layer-title">
                                 <div className="layer-icon">⚙️</div>
-                                应用服务层 (微服务架构)
+                                Domain-specific Software
                             </div>
                             <div className="components-grid">
                                 <div className="component">
@@ -389,11 +382,43 @@ const PlmSystemDesign = () => {
 
                         <div className="connection-arrows">↕️</div>
 
+                        {/* Integration Layer */}
+                        <div className="layer integration-layer">
+                            <div className="layer-title">
+                                <div className="layer-icon">🔗</div>
+                                Agent Infrastructure
+                            </div>
+                            <div className="components-grid">
+                                <div className="component">
+                                    <div className="component-title">Agent Chaining Infra </div>
+                                    <div className="component-desc">LangGraph / AutoGen - Multi-Agent协作</div>
+                                </div>
+                                <div className="component">
+                                    <div className="component-title">API Gateway</div>
+                                    <div className="component-desc">Kong / AWS API Gateway - GraphQL + REST + gRPC</div>
+                                </div>
+                                <div className="component">
+                                    <div className="component-title">RAG 框架 </div>
+                                    <div className="component-desc">LangChain / LlamaIndex - 检索增强生成</div>
+                                </div>
+                                <div className="component">
+                                    <div className="component-title">Context Management </div>
+                                    <div className="component-desc">长期+短期记忆管理</div>
+                                </div>
+                                <div className="component">
+                                    <div className="component-title">Function/Tooling Calling</div>
+                                    <div className="component-desc">LLM Model - 函数/工具调用接口</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="connection-arrows">↕️</div>
+
                         {/* Storage Layer */}
                         <div className="layer storage-layer">
                             <div className="layer-title">
                                 <div className="layer-icon">💾</div>
-                                多模态存储层
+                                Data Storage
                             </div>
                             <div className="components-grid">
                                 <div className="component">
@@ -425,31 +450,59 @@ const PlmSystemDesign = () => {
                         <div className="layer processing-layer">
                             <div className="layer-title">
                                 <div className="layer-icon">⚡</div>
-                                数据处理与 AI 层
+                                Core Infrastructure
                             </div>
                             <div className="components-grid">
                                 <div className="component">
-                                    <div className="component-title">Embedding 流水线</div>
+                                    <div className="component-title">Embedding Pipeline</div>
                                     <div className="component-desc">CAD文件向量化、特征提取、自动标签生成</div>
                                 </div>
                                 <div className="component">
-                                    <div className="component-title">ETL 编排</div>
+                                    <div className="component-title">ETL Airflow</div>
                                     <div className="component-desc">Apache Airflow - 数据同步/清洗/转换</div>
                                 </div>
                                 <div className="component">
-                                    <div className="component-title">实时流处理</div>
+                                    <div className="component-title">Real-time Streaming</div>
                                     <div className="component-desc">Kafka/Redpanda - 变更事件流/CDC</div>
                                 </div>
                                 <div className="component">
-                                    <div className="component-title">模型服务</div>
-                                    <div className="component-desc">MLflow - 模型版本管理/部署/监控</div>
+                                    <div className="component-title">Training & Eval Infra</div>
+                                    <div className="component-desc">Continuous Post-training & Evaluation</div>
+                                </div>
+                                <div className="component">
+                                    <div className="component-title">Model Serving</div>
+                                    <div className="component-desc">MLOps - Deployment, Inference Optimization, Monitoring</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="connection-arrows">↕️</div>
+
+                        {/* Model Matrix Layer */}
+                        <div className="layer model-matrix-layer">
+                            <div className="layer-title">
+                                <div className="layer-icon">🧠</div>
+                                Model Library
+                            </div>
+                            <div className="components-grid">
+                                <div className="component">
+                                    <div className="component-title">基础大模型</div>
+                                    <div className="component-desc">通用任务处理、复杂推理、知识融会贯通</div>
+                                </div>
+                                <div className="component">
+                                    <div className="component-title">多模态模型</div>
+                                    <div className="component-desc">图像+文本理解、CAD文件分析、视觉问答</div>
+                                </div>
+                                <div className="component">
+                                    <div className="component-title">边缘小模型</div>
+                                    <div className="component-desc">实时推理优化、本地部署、低延迟响应</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Tech Stack Details */}
-                    <div className="tech-stack">
+                    {/* <div className="tech-stack">
                         <h2>🛠️ 核心技术栈详解</h2>
                         <div className="tech-grid">
                             <div className="tech-category">
@@ -498,29 +551,33 @@ const PlmSystemDesign = () => {
                                 <div className="tech-item">🌐 gRPC (微服务通信)</div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Legend */}
                     <div className="legend">
                         <div className="legend-item">
-                            <div className="legend-color" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}></div>
-                            <span>AI智能层</span>
+                            <div className="legend-color" style={{background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%)'}}></div>
+                            <div className="legend-color" style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}></div>
+                            <span>企业智能体研发: Solution Team </span>
                         </div>
-                        <div className="legend-item">
+                      
+                        {/* <div className="legend-item">
                             <div className="legend-color" style={{background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'}}></div>
                             <span>集成层</span>
-                        </div>
-                        <div className="legend-item">
-                            <div className="legend-color" style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}></div>
-                            <span>应用层</span>
-                        </div>
-                        <div className="legend-item">
-                            <div className="legend-color" style={{background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'}}></div>
-                            <span>存储层</span>
-                        </div>
-                        <div className="legend-item">
+                        </div> */}
+                        
+                         <div className="legend-item">
+                             <div className="legend-color" style={{background: 'linear-gradient(135deg, #ca8a04 0%, #d97706 100%)'}}></div>
+                             <div className="legend-color" style={{background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'}}></div>
+                             <span>Training / Eval / Data / Serving Infra： AI Infra Team</span>
+                         </div>
+                        {/* <div className="legend-item">
                             <div className="legend-color" style={{background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'}}></div>
                             <span>处理层</span>
+                        </div> */}
+                        <div className="legend-item">
+                            <div className="legend-color" style={{background: 'linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%)'}}></div>
+                            <span>新模型研发：AI Research Team</span>
                         </div>
                     </div>
                 </div>
